@@ -1,0 +1,103 @@
+$color-dark: #0B0B0F;
+$color-white: #FEFEFE;
+$color-gray: #C4C4C4;
+$color-accent: #96E532;
+
+
+.movie-details {
+
+    &__inner {
+        padding: 70px 0 120px;
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+
+    &__img {
+        width: 300px;
+        height: 450px;
+        border-radius: 10px;
+    }
+
+    .details-content {
+        max-width: 630px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21px;
+        text-align: center;
+        margin: 0 auto;
+
+        &__title {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 29px;
+            margin-bottom: 15px;
+        }
+
+        &__genres,
+        &__runtime {
+            color: $color-gray;
+            margin-bottom: 15px;
+        }
+
+        &__text {
+            margin: 15px 15px 30px;
+        }
+        &__btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            width: 200px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: #C52626;
+            color: $color-white;
+            font-size: 18px;
+            text-transform: uppercase;
+            transition: filter .3s ease-in-out;
+            cursor: pointer;
+
+            &:hover{
+                filter: brightness(.8);
+            }
+            &:active{
+                filter: brightness(1.2);
+            }
+        }
+
+        .movie-rating{
+            position: static;
+            width: 90px;
+            padding: 10px 20px;
+            margin: 0 auto 15px;
+
+            &__current{
+                font-size: 18px;
+            }
+        }
+
+    }
+}
+
+
+@media screen and (max-width: 860px) {
+    .movie-details{
+        &__inner{
+            flex-direction: column;
+            align-items: center;
+        }
+        &__img{
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .movie-details{
+        &__img{
+            width: 250px;
+            height: 375px;
+        }
+    }
+}

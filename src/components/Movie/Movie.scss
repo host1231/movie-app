@@ -19,9 +19,9 @@ $color-accent: #96E532;
     &-content{
         position: absolute;
         bottom: 30px;
-        opacity: 0;
+        width: 210px;
         margin: 0 10px;
-        max-width: 210px;
+        opacity: 0;
 
         &__title{
             font-size: 20px;
@@ -37,7 +37,7 @@ $color-accent: #96E532;
     &-rating{
         position: absolute;
         top: 15px;
-        right: 15px;
+        left: 15px;
         background-color: $color-accent;
         padding: 5px 10px;
         border-radius: 10px;
@@ -50,6 +50,21 @@ $color-accent: #96E532;
 
         &__quantity{
             opacity: .8;
+        }
+    }
+
+    &__overlay{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        padding: 5px 15px;
+        border-radius: 20px;
+        color: $color-accent;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+
+        &:active {
+            background-color: rgba($color-accent, .4)
         }
     }
 
