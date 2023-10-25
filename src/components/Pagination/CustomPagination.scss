@@ -1,0 +1,17 @@
+.movies__pagination{
+    // background-color: #C4C4C4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+
+    .MuiPagination-ul {
+        li{
+
+            button{
+                color: #fff;
+
+            }
+        }
+    }
+}
