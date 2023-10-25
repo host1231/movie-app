@@ -18,7 +18,7 @@ function MovieDetails () {
                         </div>
                         <div className="details-content__runtime">{state.runtime} мин</div>
                         <p className="details-content__text">{state.description_full.slice(0, 600)}</p>
-                        <Link className="details-content__btn" to={state.torrents[1].url}>Скачать</Link>
+                        <Link className="details-content__btn" to={state.torrents[0].url ? state.torrents[0].url : ''}>Скачать</Link>
                     </div>
                 </div>
             </div>

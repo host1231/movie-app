@@ -5,16 +5,17 @@ import "./Header.scss";
 import LogoSvg from '../../assets/img/logo.svg';
 
 function Header () {
+    const [value, setValue] = React.useState(0);
     return (
         <header className="header">
             <div className="container">
                 <div className="header__inner">
-                    <div className="logo" onClick={() => window.location.reload()}>
+                    <Link className="logo" to='/' onClick={() => setValue(0)}>
                         <img className="logo__img" src={LogoSvg} alt="Logo" />
-                    </div>
+                    </Link>
                 </div>
             </div>
-            <SimpleBottomNavigation />
+            <SimpleBottomNavigation value={value} setValue={setValue} />
         </header>
     )
 }

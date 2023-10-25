@@ -14,7 +14,7 @@ function Favourites({ favouritesList, setFavouritesList, saveToFavouritesList })
         <section className="favourites">
             <div className="container">
                 <div className="favourites__inner">
-                    <h2 className="favourites__title">Избранные</h2>
+                    <h2 className="favourites__title">Избранные фильмы</h2>
                     {
                         !favouritesList.length ?
                             <h3>У вас нет избранных фильмов!!!</h3> :

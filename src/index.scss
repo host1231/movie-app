@@ -31,6 +31,11 @@ a{
   cursor: pointer;
 }
 
+input, button{
+  border: 0;
+  outline: 0;
+}
+
 body {
   font-family: 'Noto Sans', sans-serif;
   font-weight: 400;

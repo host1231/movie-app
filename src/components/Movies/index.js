@@ -17,9 +17,9 @@ function Movies({ favouritesList, setFavouritesList, saveToFavouritesList }) {
     
     React.useEffect(() => {
         getData();
-        setTimeout(() => setVisible(false), 2500)
+        setTimeout(() => setVisible(false), 2500);
     }, []);
-
+    
 
     const addToFavouritesList = (movie) => {
         const newFavouritesList = [...favouritesList, movie];
@@ -31,16 +31,15 @@ function Movies({ favouritesList, setFavouritesList, saveToFavouritesList }) {
         <section className="movies">
             <div className="container">
                 <div className="movies__inner">
-                    <h2 className="movies__title">Фильмы</h2>
+                    <h2 className="movies__title">Лучшие фильмы</h2>
                     <ul className="movies__list">
                         {
-
                             data.map(movie =>
                                 <li key={movie.id} className="movie__item" >
                                     {
                                         visible ?
                                         <Skeleton /> :
-                                        <Movie movie={movie} handleFavouritesList={addToFavouritesList} favouritesComponent={<AddToFavourites />} />
+                                        <Movie movie={movie} handleFavouritesList={addToFavouritesList} favouritesComponent={<AddToFavourites />} isActive={favouritesList.includes(movie)} />
                                     }
                                 </li>
                             )

@@ -6,8 +6,8 @@ import MovieIcon from '@mui/icons-material/Movie';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ScreenSearchDesktopOutlinedIcon from '@mui/icons-material/ScreenSearchDesktopOutlined';
 
-export default function SimpleBottomNavigation() {
-  const [value, setValue] = React.useState(0);
+export default function SimpleBottomNavigation({value, setValue}) {
+  
 
   const navigate = useNavigate();
 
@@ -16,12 +16,12 @@ export default function SimpleBottomNavigation() {
       navigate('/');
     }
     else if (value === 1) {
-      navigate('/favourites');
+      navigate('/movie-search');
     }
     else {
-      navigate('/search');
+      navigate('/favourites');
     }
-
+    
   }, [value])
 
 
@@ -33,9 +33,9 @@ export default function SimpleBottomNavigation() {
           setValue(newValue);
         }}
       >
-        <BottomNavigationAction sx={{color: '#FEFEFE'}} label="Фильмы" icon={<MovieIcon />} />
-        <BottomNavigationAction sx={{color: '#FEFEFE'}} label="Избранные" icon={<FavoriteIcon />} />
-        <BottomNavigationAction sx={{color: '#FEFEFE'}} label="Поиск" icon={<ScreenSearchDesktopOutlinedIcon />} />
+        <BottomNavigationAction sx={{color: '#FEFEFE'}} label="Лучшие фильмы" icon={<MovieIcon />} />
+        <BottomNavigationAction sx={{color: '#FEFEFE'}} label="Поиск фильма" icon={<ScreenSearchDesktopOutlinedIcon />} />
+        <BottomNavigationAction sx={{color: '#FEFEFE'}} label="Избранные фильмы" icon={<FavoriteIcon />} />
       </BottomNavigation>
   );
 }

@@ -59,13 +59,16 @@ $color-accent: #96E532;
         right: 15px;
         padding: 5px 15px;
         border-radius: 20px;
-        color: $color-accent;
+        color: $color-gray;
         cursor: pointer;
         transition: all .3s ease-in-out;
 
         &:active {
             background-color: rgba($color-accent, .4)
         }
+    }
+    .active{
+        color: $color-accent;
     }
 
     &:hover{
