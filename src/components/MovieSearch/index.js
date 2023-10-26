@@ -9,7 +9,7 @@ function MovieSearch ({ favouritesList, setFavouritesList, saveToFavouritesList 
     const [value, setValue] = React.useState('');
 
     const getMovie = async (value) => {
-        const res = await fetch(`https://yts.mx/api/v2/list_movies.json?query_term=${value}`);
+        const res = await fetch(`https://yts.mx/api/v2/list_movies.json?limit=35&query_term=${value}`);
         const {data: {movies}} = await res.json();
         setSearchMovieList(movies);
     }
